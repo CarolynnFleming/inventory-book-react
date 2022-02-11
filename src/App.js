@@ -29,10 +29,22 @@ function App() {
 
     setUser('');
   }
+
   return (
-    <div className="App">
-      
-    </div>
+    <Router>
+      <div className="App">
+        <header>
+          {
+            user &&
+            <>
+            <NavLink to="/books">Favorite Book List</NavLink>
+            <NavLink to="/create">Create</NavLink>
+            <button onClick={handleLogout}>Exit</button>
+            </>
+          }
+        </header>
+      </div>
+    </Router>
   );
 }
 
