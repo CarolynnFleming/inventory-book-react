@@ -10,6 +10,11 @@ export async function signUp(email, password) {
 }
 
 export async function signIn(email, password) {
-    const response = await client.auth.signIn({ email, password });
-    return response.user;
-  }
+  const response = await client.auth.signIn({ email, password });
+  return response.user;
+}
+
+export async function logout() {
+    await client.auth.signOut();
+    return window.location.href = '../';
+}
