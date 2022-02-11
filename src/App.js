@@ -43,6 +43,31 @@ function App() {
             </>
           }
         </header>
+        <main>
+          <Switch>
+            <Route exact path="/">
+              {
+                user
+                ? <Redirect to="/books" />
+                :<AuthPage setUser={setUser} />
+              }
+            </Route>
+            <Route exact path="/books">
+              {
+                user
+                ? <ListPge />
+                : <Redirect to="/" />
+              }
+            </Route>
+            <Route exact path="/create">
+              {
+                user
+                ? <DetailPage />
+                : <Redirect to="/" />
+              }
+            </Route>
+          </Switch>
+        </main>
       </div>
     </Router>
   );
