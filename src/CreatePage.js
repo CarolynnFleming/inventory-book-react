@@ -16,11 +16,11 @@ export default function CreatePage() {
     e.preventDefault();
 
     await creatBook({
-      title: title,
-      author: author,
-      genre: genre,
-      sample: sample,
-      year: year
+      title:title,
+      author:author,
+      genre:genre,
+      sample:sample,
+      year:year
     });
 
     history.push('/books');
@@ -43,7 +43,7 @@ export default function CreatePage() {
         </label>
         <label>
                 Sample
-          <textarea required onChange={e => setSample(e.target.value)} name='sample' />
+          <textarea required onChange={e => setSample(e.target.value)} name='year' />
         </label>
         <label>
                 Year

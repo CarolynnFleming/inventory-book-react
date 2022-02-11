@@ -7,12 +7,12 @@ export default function ListPage() {
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
-    async function fetchBooks() {
-      const books = await getBooks();
+    async function fetch() {
+      const fetchBooks = await getBooks();
 
-      setBooks(books);
+      setBooks(fetchBooks);
     }
-    fetchBooks();
+    fetch();
   }, []);
   return (
     <div className='list-books'>

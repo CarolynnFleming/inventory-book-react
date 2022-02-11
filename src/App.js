@@ -17,11 +17,11 @@ function App() {
   const [user, setUser] = useState(localStorage.getItem('supabase.auth.token'));
   
   useEffect(() => {
-    async function fetch() {
+    async function fetchUser() {
       const user = await getUser();
       setUser(user);
     }
-    fetch();
+    fetchUser();
   }, []);
 
   async function handleLogout() {
@@ -37,7 +37,7 @@ function App() {
           {
             user &&
             <>
-              <NavLink to="/books">Favorite Book List</NavLink>
+              <NavLink to="/books">Favorite Books</NavLink>
               <NavLink to="/create">Create</NavLink>
               <button onClick={handleLogout}>Exit</button>
             </>

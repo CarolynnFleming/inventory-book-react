@@ -36,7 +36,7 @@ export default function AuthPage(props) {
             onChange={e => setPassword(e.target.value)}/> 
         </label>
         <button onClick={handleSignIn} type="button">Sign In</button>
-        <button onClick={handleSignUp} type="button">Sign signUp</button>
+        <button onClick={handleSignUp} type="button">Sign Up</button>
       </form>
     </div>
   );

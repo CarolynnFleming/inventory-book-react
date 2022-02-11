@@ -22,7 +22,7 @@ export async function logout() {
 export async function creatBook(book) {
   const response = await client
     .from('books')
-    .insert([book]);
+    .insert(book);
   return checkError(response);
 }
 
