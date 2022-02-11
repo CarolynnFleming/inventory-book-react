@@ -23,6 +23,12 @@ function App() {
     }
     fetch();
   }, []);
+
+  async function handleLogout() {
+    await logout();
+
+    setUser('');
+  }
   return (
     <div className="App">
       
