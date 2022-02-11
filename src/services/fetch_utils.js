@@ -20,26 +20,26 @@ export async function logout() {
 }
 
 export async function creatBook(book) {
-    const response = await client
+  const response = await client
     .from('books')
     .insert([book]);
-    return checkError(response);
+  return checkError(response);
 }
 
 export async function getBooks() {
-    const response = await client
+  const response = await client
     .from('books')
     .select();
 
-    return checkError(response);
+  return checkError(response);
 }
 
 export async function getBookById(id) {
-    const response = await client
+  const response = await client
     .from('books')
     .select()
     .match({ id })
     .single();
 
-    return checkError(response);
+  return checkError(response);
 }
