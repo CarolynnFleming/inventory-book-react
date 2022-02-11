@@ -15,6 +15,13 @@ export async function signIn(email, password) {
 }
 
 export async function logout() {
-    await client.auth.signOut();
-    return window.location.href = '../';
+  await client.auth.signOut();
+  return window.location.href = '../';
+}
+
+export async function creatBook(book) {
+    const response = await client
+    .from('books')
+    .insert([book]);
+    return checkError(response);
 }
