@@ -12,4 +12,12 @@ export default function AuthPage(props) {
 
     props.setUser(user);
   }
+
+  async function handleSignUp(e) {
+    e.preventDefault();
+
+    const user = await signUp(email, password);
+
+    props.setUser(user);
+  }
 }
