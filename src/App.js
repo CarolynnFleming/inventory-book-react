@@ -62,8 +62,8 @@ function App() {
             <Route exact path="/books/:id">
               {
                 user
-                ? <DetailPage />
-                : <Redirect to="/"/>
+                  ? <DetailPage />
+                  : <Redirect to="/"/>
               }
             </Route>
             <Route exact path="/create">
