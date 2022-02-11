@@ -25,3 +25,11 @@ export async function creatBook(book) {
     .insert([book]);
     return checkError(response);
 }
+
+export async function getBooks() {
+    const response = await client
+    .from('books')
+    .select();
+
+    return checkError(response);
+}
