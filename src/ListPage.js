@@ -4,17 +4,21 @@ import { getBooks } from './services/fetch_utils';
 import Book from './Book';
 
 export default function ListPage() {
-    const [books, setBooks] = useState([]);
+  const [books, setBooks] = useState([]);
 
-    useEffect(() => {
-        async function fetchBooks() {
-            const books = await getBooks();
+  useEffect(() => {
+    async function fetchBooks() {
+      const books = await getBooks();
 
-            setBooks(books);
-        }
-        fetchBooks();
-    }, []);
+      setBooks(books);
+    }
+    fetchBooks();
+  }, []);
   return (
-    <div>ListPage</div>
-  )
+    <div className='list-books'>
+      {
+        books.map(book => <Book key={book.id} book={book} />)
+      }
+    </div>
+  );
 }
