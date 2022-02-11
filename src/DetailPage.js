@@ -18,8 +18,8 @@ export default function DetailPage() {
 
   return (
     <div className='detail'>
-        <h1><em>{book.title}</em></h1>
-        <p>{book.sample}</p>
+      <h1><em>{book.title}</em></h1>
+      <p>{book.sample}</p>
     </div>
   );
 }

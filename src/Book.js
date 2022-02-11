@@ -13,6 +13,7 @@ year }) {
         <p>by:{author}</p>
         <p>Genre:{genre}</p>
         <p>Year:{year}</p>
+        <h2><em>Click for sample📚</em></h2>
       </div>
     </Link>
   );
