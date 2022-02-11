@@ -12,9 +12,23 @@ export default function CreatePage() {
   const [sample, setSample] = useState('');
   const [year, setYear] = useState(1);
 
-  
+  async function handleSubmit(e) {
+      e.preventDefault();
+
+      await creatBook({
+          title: title,
+          author: author,
+          genre: genre,
+          sample: sample,
+          year: year
+      });
+
+      history.push('/books');
+  }
   return (
-    <div>CreatePage</div>
+    <div className='create'>
+        <form
+    </div>
   );
 }
 
