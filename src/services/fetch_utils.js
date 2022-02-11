@@ -33,3 +33,13 @@ export async function getBooks() {
 
     return checkError(response);
 }
+
+export async function getBookById(id) {
+    const response = await client
+    .from('books')
+    .select()
+    .match({ id })
+    .single();
+
+    return checkError(response);
+}
