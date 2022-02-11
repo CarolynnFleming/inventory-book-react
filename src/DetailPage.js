@@ -17,6 +17,9 @@ export default function DetailPage() {
   }, [match]);
 
   return (
-    <div>DetailPage</div>
+    <div className='detail'>
+        <h1><em>{book.title}</em></h1>
+        <p>{book.sample}</p>
+    </div>
   );
 }
