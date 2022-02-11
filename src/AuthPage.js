@@ -22,22 +22,22 @@ export default function AuthPage(props) {
   }
 
   return (
-      <div className='auth'>
-          <h1><em>BOOKS</em></h1>
-          <form onSubmit={handleSignIn}>
-              <label>
+    <div className='auth'>
+      <h1><em>BOOKS</em></h1>
+      <form onSubmit={handleSignIn}>
+        <label>
                   Email
-                  <input value={email} required type="email" name="email"
-                  onChange={e => setEmail(e.target.value)}/> 
-              </label>
-              <label>
+          <input value={email} required type="email" name="email"
+            onChange={e => setEmail(e.target.value)}/> 
+        </label>
+        <label>
                   Password
-                  <input value={password} required type="password" name="password"
-                  onChange={e => setPassword(e.target.value)}/> 
-              </label>
-              <button onClick={handleSignIn} type="button">Sign In</button>
-              <button onClick={handleSignUp} type="button">Sign signUp</button>
-            </form>
-      </div>
-  )
+          <input value={password} required type="password" name="password"
+            onChange={e => setPassword(e.target.value)}/> 
+        </label>
+        <button onClick={handleSignIn} type="button">Sign In</button>
+        <button onClick={handleSignUp} type="button">Sign signUp</button>
+      </form>
+    </div>
+  );
 }
