@@ -15,6 +15,14 @@ import './App.css';
 import { logout } from './services/fetch_utils';
 function App() {
   const [user, setUser] = useState(localStorage.getItem('supabase.auth.token'));
+  
+  useEffect(() => {
+    async function fetch() {
+      const user = await getUser();
+      setUser(user);
+    }
+    fetch();
+  }, []);
   return (
     <div className="App">
       
