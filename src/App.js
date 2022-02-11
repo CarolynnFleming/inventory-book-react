@@ -37,9 +37,9 @@ function App() {
           {
             user &&
             <>
-            <NavLink to="/books">Favorite Book List</NavLink>
-            <NavLink to="/create">Create</NavLink>
-            <button onClick={handleLogout}>Exit</button>
+              <NavLink to="/books">Favorite Book List</NavLink>
+              <NavLink to="/create">Create</NavLink>
+              <button onClick={handleLogout}>Exit</button>
             </>
           }
         </header>
@@ -48,22 +48,29 @@ function App() {
             <Route exact path="/">
               {
                 user
-                ? <Redirect to="/books" />
-                :<AuthPage setUser={setUser} />
+                  ? <Redirect to="/books" />
+                  : <AuthPage setUser={setUser} />
               }
             </Route>
             <Route exact path="/books">
               {
                 user
-                ? <ListPge />
-                : <Redirect to="/" />
+                  ? <ListPge />
+                  : <Redirect to="/" />
+              }
+            </Route>
+            <Route exact path="/books/:id">
+              {
+                user
+                ? <DetailPage />
+                : <Redirect to="/"/>
               }
             </Route>
             <Route exact path="/create">
               {
                 user
-                ? <DetailPage />
-                : <Redirect to="/" />
+                  ? <CreatePage />
+                  : <Redirect to="/" />
               }
             </Route>
           </Switch>
