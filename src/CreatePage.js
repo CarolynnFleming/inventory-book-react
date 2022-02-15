@@ -31,23 +31,23 @@ export default function CreatePage() {
         <h1>Add Book</h1>
         <label>
                 Title
-          <input required onChange={e => setTitle(e.target.value)} name='title' />
+          <input required value={title} onChange={e => setTitle(e.target.value)} name='title' />
         </label>
         <label>
                 Author
-          <input required onChange={e => setAuthor(e.target.value)} name='author' />
+          <input required value={author} onChange={e => setAuthor(e.target.value)} name='author' />
         </label>
         <label>
                 Genre
-          <input required onChange={e => setGenre(e.target.value)} name='genre' />
+          <input required value={genre} onChange={e => setGenre(e.target.value)} name='genre' />
         </label>
         <label>
                 Sample
-          <textarea required onChange={e => setSample(e.target.value)} name='year' />
+          <textarea required value={sample} onChange={e => setSample(e.target.value)} name='sample' />
         </label>
         <label>
                 Year
-          <input required onChange={e => setYear(e.target.value)} name='year' />
+          <input required value={year} onChange={e => setYear(e.target.value)} name='year' />
         </label>
         <button>Create Book</button>
       </form>
